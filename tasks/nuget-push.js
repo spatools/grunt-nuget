@@ -41,7 +41,7 @@ module.exports = function (grunt) {
                 async.forEach(
                     file.src,
                     function (src, complete) {
-                        nuget.push(src, _.extend(params, { outputDirectory: dest }), complete);
+                        nuget.push(src, params, complete);
                     },
                     callback
                 );
