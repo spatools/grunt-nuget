@@ -58,7 +58,7 @@ module.exports = function (grunt) {
         },
 
         isSpecFile = function (file) {
-            return path.extname(file) === ".nuspec";
+            return path.extname(file) === ".nuspec" || path.extname(file) === ".csproj";
         },
         isPackageFile = function (file) {
             return path.extname(file) === ".nupkg";
