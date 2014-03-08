@@ -3,6 +3,7 @@
   "description": "Grunt NuGet interface - Prepare, package and publish your application in NuGet gallery using Grunt JS",
   "version": "0.1.2",
   "homepage": "https://github.com/spatools/grunt-nuget.git",
+  "license": "MIT",
   "author": {
     "name": "SPA Tools",
     "url": "http://github.com/spatools/"
@@ -18,7 +19,7 @@
     "grunt": "0.4.x"
   },
   "dependencies": {
-	"grunt": "0.4.x"
+    "grunt": "0.4.x"
   },
   "keywords": [
     "gruntplugin",
