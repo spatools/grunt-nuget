@@ -41,7 +41,8 @@ module.exports = function (grunt) {
                 async.forEach(
                     file.src,
                     function (src, complete) {
-                        nuget.pack(src, _.extend(params, { outputDirectory: dest }), complete);
+                        grunt.file.mkdir(dest);
+                        nuget.pack(src, _.extend(params, { outputDirectory: dest }), complete);    
                     },
                     callback
                 );
