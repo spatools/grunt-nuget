@@ -70,7 +70,7 @@ module.exports = function (grunt) {
                 return;
             }
 
-            grunt.log.write("Trying to create NuGet package from " + path + ". ");
+            grunt.log.writeln("Trying to create NuGet package from " + path + ". ");
             grunt.util.spawn({ cmd: nugetPath, args: createArguments("Pack", path, args) }, createSpawnCallback(path, callback));
         },
         push = function (path, args, callback) {
@@ -79,7 +79,7 @@ module.exports = function (grunt) {
                 return;
             }
 
-            grunt.log.write("Trying to publish NuGet package " + path + ". ");
+            grunt.log.writeln("Trying to publish NuGet package " + path + ". ");
             grunt.util.spawn({ cmd: nugetPath, args: createArguments("Push", path, args) }, createSpawnCallback(path, callback));
         },
         setapikey = function (key, args, callback) {
