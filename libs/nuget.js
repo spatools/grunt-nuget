@@ -86,7 +86,7 @@ module.exports = function (grunt) {
                 return;
             }
 
-            grunt.log.write("Trying to create NuGet package from " + path + ". ");
+            grunt.log.writeln("Trying to create NuGet package from " + path + ". ");
             grunt.util.spawn({ cmd: executable, args: createArguments("Pack", path, args) }, createSpawnCallback(path, callback));
         },
 
@@ -96,7 +96,7 @@ module.exports = function (grunt) {
                 return;
             }
 
-            grunt.log.write("Trying to publish NuGet package " + path + ". ");
+            grunt.log.writeln("Trying to publish NuGet package " + path + ". ");
             grunt.util.spawn({ cmd: executable, args: createArguments("Push", path, args) }, createSpawnCallback(path, callback));
         },
         restore = function (path, args, callback) {
@@ -105,7 +105,7 @@ module.exports = function (grunt) {
                 return;
             }
 
-            grunt.log.write("Trying to restore NuGet packages for " + path + ". ");
+            grunt.log.writeln("Trying to restore NuGet packages for " + path + ". ");
             grunt.util.spawn({ cmd: executable, args: createArguments("Restore", path, args) }, createSpawnCallback(path, callback));
         },
         setapikey = function (key, args, callback) {
