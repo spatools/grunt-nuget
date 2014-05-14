@@ -63,6 +63,12 @@ module.exports = function (grunt) {
         isPackageFile = function (file) {
             return path.extname(file) === ".nupkg";
         },
+        isSolutionFile = function (file) {
+            return path.extname(file) === ".sln";
+        },
+        isConfigFile = function (file) {
+            return path.basename(file) === "packages.config";
+        },
 
         pack = function (path, args, callback) {
             if (!isSpecFile(path)) {
@@ -82,6 +88,15 @@ module.exports = function (grunt) {
             grunt.log.write("Trying to publish NuGet package " + path + ". ");
             grunt.util.spawn({ cmd: nugetPath, args: createArguments("Push", path, args) }, createSpawnCallback(path, callback));
         },
+        restore = function (path, args, callback) {
+            if (!isSolutionFile(path) && !isConfigFile(path)) {
+                callback("File path '" + path + "' is not a valid solution file or packages.config !");
+                return;
+            }
+
+            grunt.log.write("Trying to restore NuGet packages for " + path + ". ");
+            grunt.util.spawn({ cmd: nugetPath, args: createArguments("Restore", path, args) }, createSpawnCallback(path, callback));
+        },
         setapikey = function (key, args, callback) {
             grunt.util.spawn({ cmd: nugetPath, args: createArguments("SetApiKey", key, args) }, createSpawnCallback(null, callback));
         };
@@ -92,6 +107,7 @@ module.exports = function (grunt) {
 
         pack: pack,
         push: push,
+        restore: restore,
         setapikey: setapikey
     };
 };

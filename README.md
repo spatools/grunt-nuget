@@ -36,10 +36,21 @@ For package publication : ([more informations][push-options])
 	nugetpush: {
 		dist: {
 			src: 'tests/*.nupkg',
-			
+ 
 			options: {
 				apiKey: 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'
 			}
+		}
+	}
+```
+
+For package restore : ([more informations][restore-options])
+
+```javascript
+	nugetrestore: {
+		restore: {
+			src: 'tests/packages.config',
+			dest: 'packages/'
 		}
 	}
 ```
@@ -57,6 +68,7 @@ grunt nugetkey --key=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 [grunt]: https://github.com/gruntjs/grunt
 [pack-options]: https://github.com/spatools/grunt-nuget/wiki/Pack-Options
 [push-options]: https://github.com/spatools/grunt-nuget/wiki/Push-Options
+[restore-options]: https://github.com/spatools/grunt-nuget/wiki/Restore-Options
 [key-options]: https://github.com/spatools/grunt-nuget/wiki/Key-Options
 
 ## Release History

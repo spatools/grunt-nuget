@@ -36,6 +36,7 @@
     <Content Include="Gruntfile.js" />
     <Content Include="libs\nuget.js" />
     <Content Include="tasks\nuget-key.js" />
+    <Content Include="tasks\nuget-restore.js" />
     <Content Include="tasks\nuget-pack.js" />
     <Content Include="libs\NuGet.exe" />
     <Content Include="tasks\nuget-push.js" />
@@ -45,6 +46,7 @@
     <None Include="package.json" />
     <None Include="README.md" />
     <None Include="tests\Package.nuspec" />
+    <None Include="tests\packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>
