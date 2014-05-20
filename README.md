@@ -7,6 +7,8 @@ grunt-nuget
 
 Install this grunt plugin next to your project's gruntfile with: `npm install grunt-nuget --save-dev`
 
+NOTE : if you are on a unix system, you should install [Mono][mono] first.
+
 Then add this line to your project's `Gruntfile.js` :
 
 ```javascript
@@ -66,6 +68,7 @@ grunt nugetkey --key=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 
 [grunt]: https://github.com/gruntjs/grunt
+[mono]: http://www.go-mono.com/mono-downloads/download.html
 [pack-options]: https://github.com/spatools/grunt-nuget/wiki/Pack-Options
 [push-options]: https://github.com/spatools/grunt-nuget/wiki/Push-Options
 [restore-options]: https://github.com/spatools/grunt-nuget/wiki/Restore-Options
