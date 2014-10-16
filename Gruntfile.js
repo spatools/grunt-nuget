@@ -1,6 +1,10 @@
 ﻿module.exports = function (grunt) {
     grunt.initConfig({
         nugetpack: {
+            options: {
+                verbose: true
+            },
+
             dist: {
                 src: 'tests/Package.nuspec',
                 dest: 'tests/'
