@@ -1,5 +1,4 @@
-grunt-nuget
-================
+# grunt-nuget [![NPM version](https://badge.fury.io/js/grunt-nuget.png)](http://badge.fury.io/js/grunt-nuget)
 
 [Grunt][grunt] NuGet Interface - Create and publish your NuGet packages using GruntJS.
 
@@ -15,7 +14,7 @@ Then add this line to your project's `Gruntfile.js` :
 grunt.loadNpmTasks('grunt-nuget');
 ```
 
-Then specify your config: ([more informations][doc-options])
+Then specify your config:
 
 ```javascript
 grunt.initConfig({
