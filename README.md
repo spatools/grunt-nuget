@@ -86,4 +86,5 @@ grunt nugetkey --key=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 * 0.1.4
     * Update NuGet.exe to version 2.8.2
     * Fix issue in options parsing.
-
+* 0.1.5
+	* Update NuGet.exe to version 3.2.0
