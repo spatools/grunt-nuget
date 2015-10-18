@@ -2,7 +2,7 @@
     grunt.initConfig({
         nugetpack: {
             options: {
-                verbose: true
+                verbosity: "detailed"
             },
 
             dist: {

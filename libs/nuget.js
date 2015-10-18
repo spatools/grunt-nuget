@@ -60,7 +60,7 @@ module.exports = function (grunt) {
                     callback(error);
                 }
                 else {
-                    if ("verbose" in args) {
+                    if ("verbose" in args || "verbosity" in args) {
                         grunt.log.writeln(result);
                     }
 
