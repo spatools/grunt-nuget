@@ -88,3 +88,6 @@ grunt nugetkey --key=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
     * Fix issue in options parsing.
 * 0.1.5
 	* Update NuGet.exe to version 3.2.0
+* 0.1.6
+	* Update NuGet.exe to version 3.4.4
+	* Add default `Source` option in `push` task to allow backward compatibility
