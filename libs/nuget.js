@@ -25,7 +25,7 @@
  */
 
 var path = require("path");
-var nugetPath = path.join(__dirname, "NuGet.exe");
+var nugetPath = path.join(__dirname, "nuget.exe");
 
 module.exports = function (grunt) {
     var _ = grunt.util._,
