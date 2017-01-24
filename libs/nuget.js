@@ -112,6 +112,15 @@ module.exports = function (grunt) {
             grunt.log.writeln("Trying to restore NuGet packages for " + path + ". ");
             grunt.util.spawn({ cmd: executable, args: createArguments("Restore", path, args) }, createSpawnCallback(path, args, callback));
         },
+        update = function (path, args, callback) {
+            if (!isSolutionFile(path)) {
+                callback("File path '" + path + "' is not a valid solution file!");
+                return;
+            }
+
+            grunt.log.writeln("Trying to update NuGet packages for " + path + ". ");
+            grunt.util.spawn({ cmd: executable, args: createArguments("Update", path, args) }, createSpawnCallback(path, args, callback));
+        },
         setapikey = function (key, args, callback) {
             grunt.util.spawn({ cmd: executable, args: createArguments("SetApiKey", key, args) }, createSpawnCallback(null, args, callback));
         };
@@ -123,6 +132,7 @@ module.exports = function (grunt) {
         pack: pack,
         push: push,
         restore: restore,
+        update: update,
         setapikey: setapikey
     };
 };

@@ -56,11 +56,21 @@ For package restore : ([more informations][restore-options])
 	}
 ```
 
+For project update : ([more informations][update-options])
+
+```javascript
+	nugetupdate: {
+		update: {
+			src: 'project.sln'
+		}
+	}
+```
+
 ```javascript
 });
 ```
 
-In order to avoid specifying your API Key inside your package you can use command line task : ([more informations][key-options])
+In order to avoid specifying your API Key inside your `Gruntfile` you can use command line task : ([more informations][key-options])
 
 ```
 grunt nugetkey --key=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
@@ -71,6 +81,7 @@ grunt nugetkey --key=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 [pack-options]: https://github.com/spatools/grunt-nuget/wiki/Pack-Options
 [push-options]: https://github.com/spatools/grunt-nuget/wiki/Push-Options
 [restore-options]: https://github.com/spatools/grunt-nuget/wiki/Restore-Options
+[update-options]: https://github.com/spatools/grunt-nuget/wiki/Update-Options
 [key-options]: https://github.com/spatools/grunt-nuget/wiki/Key-Options
 
 ## Release History
@@ -91,3 +102,7 @@ grunt nugetkey --key=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 * 0.1.6
 	* Update NuGet.exe to version 3.4.4
 	* Add default `Source` option in `push` task to allow backward compatibility
+* 0.1.7
+	* Update NuGet.exe to version 3.5.0
+* 0.2.0
+	* Add task nugetupdate 

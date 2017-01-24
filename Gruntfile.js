@@ -16,6 +16,11 @@
                 dest: 'packages/'
             }
         },
+        nugetupdate: {
+            update: {
+                src: 'tests/project.sln'
+            }
+        },
         clean: {
             pack: {
                 src: 'tests/PackageTest.1.0.0.nupkg'
