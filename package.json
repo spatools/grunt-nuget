@@ -1,7 +1,7 @@
 {
   "name": "grunt-nuget",
   "description": "Grunt NuGet interface - Prepare, package and publish your application in NuGet gallery using Grunt JS",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "homepage": "https://github.com/spatools/grunt-nuget.git",
   "license": "MIT",
   "author": {
