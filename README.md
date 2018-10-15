@@ -106,3 +106,7 @@ grunt nugetkey --key=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 	* Update NuGet.exe to version 3.5.0
 * 0.2.0
 	* Add task nugetupdate 
+* 0.3.0
+	* Update NuGet.exe to version 4.1
+* 0.3.1
+	* Update NuGet.exe to version 4.7.1
