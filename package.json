@@ -1,13 +1,10 @@
 {
-  "name": "grunt-nuget",
+  "name": "@robinherbots/grunt-nuget",
   "description": "Grunt NuGet interface - Prepare, package and publish your application in NuGet gallery using Grunt JS",
   "version": "0.3.2",
   "homepage": "https://github.com/spatools/grunt-nuget.git",
   "license": "MIT",
-  "author": {
-    "name": "SPA Tools",
-    "url": "http://github.com/spatools/"
-  },
+  "author": "SPA Tools (http://github.com/spatools/)",
   "repository": {
     "type": "git",
     "url": "git://github.com/spatools/grunt-nuget.git"
@@ -19,8 +16,8 @@
     "test": "grunt"
   },
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-clean": "^1.0.0"
+    "grunt": "^1.1.0",
+    "grunt-contrib-clean": "^2.0.0"
   },
   "keywords": [
     "gruntplugin",
@@ -33,5 +30,10 @@
     "restore",
     "publish",
     "gallery"
-  ]
+  ],
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {}
 }
