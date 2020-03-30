@@ -41,7 +41,7 @@ module.exports = function (grunt) {
                 async.forEach(
                     file.src,
                     function (src, complete) {
-                        nuget.restore(src, _.extend(params, { packagesDirectory: dest }), complete);
+                        nuget.restore(src, dest ? _.extend(params, { packagesDirectory: dest }) : params, complete);
                     },
                     callback
                 );
